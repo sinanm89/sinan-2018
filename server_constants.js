@@ -20,8 +20,8 @@ const args = read_args()
 
 var port = process.env.MY_PORT || 3000
 
-var https_key = args.https_cert || process.env.HTTPS_KEY || path.join(__dirname, 'server_cert/server.key');
-var https_cert = args.https_key || process.env.HTTPS_CERT || path.join(__dirname, 'server_cert/server.crt');
+var https_key = args.https_key || process.env.HTTPS_KEY || path.join(__dirname, 'server_cert/server.pem');
+var https_cert = args.https_cert || process.env.HTTPS_CERT || path.join(__dirname, 'server_cert/server.crt');
 
 var production = args.production || false
 
@@ -32,6 +32,6 @@ const options = {
 
 module.exports = {
   "port": port,
-  "https_options": options
-  "debug": !production
+  "https_options": options,
+  "debug": production
 };

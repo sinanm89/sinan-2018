@@ -13,7 +13,7 @@ function check_signature(uname, signature, passphrase, actual) {
         port: 3000,
         path: '/signed/' + uname,
         method: 'POST',
-        rejectUnauthorized: false,
+        rejectUnauthorized: constants.debug,
         headers: {
             'Content-Type': 'application/json',
             'Content-Length': postData.length,
@@ -38,10 +38,8 @@ function get_signatures(uname, message, private_key, passphrase){
     // const prv = fs.readFileSync(f_name, 'utf-8');
     const signer = crypto.createSign('SHA256');
     signer.update(message, 'utf8');
-
     var signature_hex = signer.sign({'key': private_key, 'passphrase': passphrase}, 'base64');
     console.log(signature_hex);
-
     return signature_hex;
 }
 

@@ -1,0 +1,26 @@
+{
+  "name": "sinan-2018",
+  "version": "1.0.0",
+  "description": "a client server combo for signature checking and public key transfers.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0"
+  },
+  "dependencies": {
+    "nodejs": "^0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinanm89/sinan-2018.git"
+  },
+  "author": "Sinan Midillili",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sinanm89/sinan-2018/issues"
+  },
+  "homepage": "https://github.com/sinanm89/sinan-2018#readme"
+}

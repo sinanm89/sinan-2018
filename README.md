@@ -10,7 +10,7 @@ Depending on the arguments passed the script behaves differently.
 
 	node server.js
 
-## On another terminal instance;
+## On another terminal instance
 
 password triggers public key save, export or argument is necessary
 
